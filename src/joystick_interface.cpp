@@ -13,7 +13,13 @@ void translate(const joystick::js_axes msg){
 	geometry_msgs::Twist m;
 	m.linear.x = msg.y;
 	//m.linear.y = msg.x;
-	m.angular.z = -1.0*msg.x;
+	//m.angular.z = -1.0*msg.x;
+	float x_temp = msg.x;
+	float z_temp = msg.z;
+	float sum = x_temp+z_temp;
+	x_temp /= sum;
+	z_temp /= sum;
+	m.angular.z = -0.8*msg.z - 0.2*msg.x;
 	pub.publish(m);
 }
 

@@ -9,7 +9,7 @@
 ros::Subscriber sub;
 ros::Publisher pub;
 
-void translate(const joystick::js_axes msg){
+void translate(const joystick::js_axes& msg){
 	geometry_msgs::Twist m;
 	m.linear.x = msg.y;
 	//m.linear.y = msg.x;

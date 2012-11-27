@@ -3,7 +3,7 @@
 #include "joystick/js_axes.h"
 
 #define JOYSTICK_INTERFACE_NODE "joystick_interface"
-#define JOYSTICK_CMD_TOPIC "joystick_axes"
+#define JOYSTICK_CMD_TOPIC "joystick"
 #define CMD_VEL "cmd_vel"
 
 ros::Subscriber sub;

@@ -19,7 +19,8 @@ void translate(const joystick::js_axes& msg){
 	float sum = x_temp+z_temp;
 	x_temp /= sum;
 	z_temp /= sum;
-	m.angular.z = -0.8*msg.z - 0.2*msg.x;
+	//m.angular.z = -0.1*z_temp - 0.9*x_temp;
+	m.angular.z = -1.0*msg.x;
 	pub.publish(m);
 }
 

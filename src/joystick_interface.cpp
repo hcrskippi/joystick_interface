@@ -11,7 +11,7 @@ ros::Publisher pub;
 
 void translate(const joystick::js_axes& msg){
 	geometry_msgs::Twist m;
-	m.linear.x = msg.y;
+	m.linear.x = -1.0*msg.y;
 	//m.linear.y = msg.x;
 	//m.angular.z = -1.0*msg.x;
 	float x_temp = msg.x;

@@ -4,7 +4,7 @@
 
 #define JOYSTICK_INTERFACE_NODE "joystick_interface"
 #define JOYSTICK_CMD_TOPIC "joystick"
-#define CMD_VEL "cmd_vel"
+#define CMD_VEL "joystick_cmd_vel"
 
 ros::Subscriber sub;
 ros::Publisher pub;
